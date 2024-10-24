@@ -7,7 +7,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx", // Correcto para React 17+
+    "jsx": "react-jsx",
     /* Bundler mode */
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
