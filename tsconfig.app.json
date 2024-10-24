@@ -5,20 +5,27 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": ["jest", "@testing-library/jest-dom"],
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    /* Módulos y resolución */
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
+    "resolveJsonModule": true /* Permitir importar JSON */,
 
-    /* Linting */
+    /* Configuración JSX para React */
+    "jsx": "react",
+
+    /* No emitir archivos JS compilados */
+    "noEmit": true,
+
+    /* Estricta verificación de tipos */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src/**/*", "jest.setup.js"]
 }

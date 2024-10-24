@@ -1,12 +1,12 @@
 import { render, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect"; // Import para Jest DOM
-import { Provider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
+import "@testing-library/jest-dom/extend-expect"; // Extiende Jest con métodos de dom
+import { Provider } from "react-redux"; // Debes asegurarte de que estos imports sean correctos
+import { BrowserRouter as Router } from "react-router-dom"; // Lo mismo aquí
 import TasksPage from "../pages/TaskPage";
 import { store } from "../store/store";
 
-// Test para renderizar la página de Tasks
 test("renders tasks component", () => {
+  // Asegurarse de que el valor de renderización es correcto
   const { getByText } = render(
     <Provider store={store}>
       <Router>
@@ -17,7 +17,6 @@ test("renders tasks component", () => {
   expect(getByText(/Nueva Task/i)).toBeInTheDocument();
 });
 
-// Test para agregar una nueva tarea
 test("adds a new task", () => {
   const { getByText, getByPlaceholderText } = render(
     <Provider store={store}>
