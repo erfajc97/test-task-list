@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import TasksPage from "./../pages/TaskPage";
 test("renders tasks page", () => {
   render(<TasksPage />);
-  // Aquí puedes añadir tus tests
+
   const linkElement = screen.getByText(/Nueva Task/i);
   expect(linkElement).toBeInTheDocument();
 });
