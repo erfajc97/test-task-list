@@ -6,26 +6,26 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "types": ["jest", "@testing-library/jest-dom"],
-
-    /* Módulos y resolución */
+    "jsx": "react-jsx",
+    /* Bundler mode */
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "resolveJsonModule": true /* Permitir importar JSON */,
-
-    /* Configuración JSX para React */
-    "jsx": "react",
-
-    /* No emitir archivos JS compilados */
     "noEmit": true,
-
-    /* Estricta verificación de tipos */
+    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*", "jest.setup.js"]
+  "include": [
+    "src/**/*",
+    "jest.setup.ts",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ],
+  "exclude": ["node_modules"]
 }

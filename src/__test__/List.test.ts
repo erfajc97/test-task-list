@@ -13,7 +13,7 @@ test("fetches and displays data", async () => {
     .reply(200, [{ id: "1", name: "Pauline Blanda", avatar: "avatar1.png" }]);
 
   // Renderizar la página de lista
-  const { getByText } = render(<ListPage />);
+  const { getByText } = render(<ListPage /);
 
   // Esperar que se muestre el nombre correcto en el DOM
   await waitFor(() => expect(getByText(/Pauline Blanda/i)).toBeInTheDocument());
